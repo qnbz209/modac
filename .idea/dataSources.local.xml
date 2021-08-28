@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="DB-212.5080.22">
+    <data-source name="modac" uuid="64fc5a86-77ec-4399-91b7-2afaebc9a74c">
+      <database-info product="MySQL" version="8.0.25" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.25 (Revision: 08be9e9b4cba6aa115f9b27b215887af40b159e0)" dbms="MYSQL" exact-version="8.0.25" exact-driver-version="8.0">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="@" />
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="health-mongodb" uuid="c0861a71-72b8-40ad-9245-67558927976e">
+      <database-info product="Mongo DB" version="4.0.8" jdbc-version="4.2" driver-name="MongoDB JDBC Driver" driver-version="1.11" dbms="MONGO" exact-version="4.0.8" exact-driver-version="1.11" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>dev</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema">
+            <name qname="alpha_healthAccount" />
+            <name qname="alpha_healthApplication" />
+            <name qname="alphaHealthAccount" />
+            <name qname="alphaHealthApplication" />
+            <name qname="dev_healthAccount" />
+            <name qname="dev_healthApplication" />
+            <name qname="healthApplication" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="health-platform-mongodb" uuid="46efa56b-dc56-4744-b387-a6e02dd92b61">
+      <database-info product="Mongo DB" version="4.0.8" jdbc-version="4.2" driver-name="MongoDB JDBC Driver" driver-version="1.11" dbms="MONGO" exact-version="4.0.8" exact-driver-version="1.11" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>dev</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema">
+            <name qname="@" />
+            <name qname="alpha_healthAccount" />
+            <name qname="alpha_healthApplication" />
+            <name qname="alphaHealthAccount" />
+            <name qname="alphaHealthApplication" />
+            <name qname="dev_healthAccount" />
+            <name qname="dev_healthApplication" />
+            <name qname="healthApplication" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="health-pay-mysql" uuid="b0801211-d352-4497-819d-7fd0c2d5491e">
+      <database-info product="MySQL" version="5.7.22-log" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.25 (Revision: 08be9e9b4cba6aa115f9b27b215887af40b159e0)" dbms="MYSQL" exact-version="5.7.22" exact-driver-version="8.0">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>askme</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="health_pay" />
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+  </component>
+</project>
