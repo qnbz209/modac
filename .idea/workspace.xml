@@ -5,73 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a81026b-0cb9-4138-8848-e68a6e59ad0b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/oauth/.gradle/7.1.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/.gradle/7.1.1/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/.gradle/7.1.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/.gradle/7.1.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/.gradle/7.1.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/.gradle/7.1.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/.gradle/7.1.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/.gradle/7.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/.gradle/7.1.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/.gradle/checksums/md5-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build/bootJarMainClassName" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build/bootRunMainClassName" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build/classes/java/main/com/modac/oauth/OauthApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build/classes/java/main/com/modac/oauth/config/WebConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build/classes/java/main/com/modac/oauth/controller/OauthController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build/classes/java/main/com/modac/oauth/converter/SocialLoginTypeConverter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build/classes/java/main/com/modac/oauth/model/enumclass/SocialLoginType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build/classes/java/main/com/modac/oauth/service/OauthService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build/classes/java/main/com/modac/oauth/service/social/GoogleOauth.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build/classes/java/main/com/modac/oauth/service/social/SocialOauth.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build/classes/java/test/com/modac/oauth/OauthApplicationTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build/libs/oauth-0.0.1-SNAPSHOT-plain.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build/libs/oauth-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build/reports/tests/test/classes/com.modac.oauth.OauthApplicationTests.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build/reports/tests/test/css/base-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build/reports/tests/test/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build/reports/tests/test/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build/reports/tests/test/js/report.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build/reports/tests/test/packages/com.modac.oauth.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build/resources/main/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build/test-results/test/TEST-com.modac.oauth.OauthApplicationTests.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build/test-results/test/binary/output.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build/test-results/test/binary/output.bin.idx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build/test-results/test/binary/results.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build/tmp/bootJar/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build/tmp/compileTestJava/source-classes-mapping.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/src/main/java/com/modac/oauth/OauthApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/src/main/java/com/modac/oauth/config/WebConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/src/main/java/com/modac/oauth/controller/OauthController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/src/main/java/com/modac/oauth/converter/SocialLoginTypeConverter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/src/main/java/com/modac/oauth/model/enumclass/SocialLoginType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/src/main/java/com/modac/oauth/service/OauthService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/src/main/java/com/modac/oauth/service/social/GoogleOauth.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/src/main/java/com/modac/oauth/service/social/SocialOauth.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oauth/src/test/java/com/modac/oauth/OauthApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/46efa56b-dc56-4744-b387-a6e02dd92b61.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/46efa56b-dc56-4744-b387-a6e02dd92b61.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/64fc5a86-77ec-4399-91b7-2afaebc9a74c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/64fc5a86-77ec-4399-91b7-2afaebc9a74c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b0801211-d352-4497-819d-7fd0c2d5491e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b0801211-d352-4497-819d-7fd0c2d5491e.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c0861a71-72b8-40ad-9245-67558927976e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c0861a71-72b8-40ad-9245-67558927976e.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

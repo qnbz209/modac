@@ -16,7 +16,7 @@
       </schema-mapping>
     </data-source>
     <data-source name="health-mongodb" uuid="c0861a71-72b8-40ad-9245-67558927976e">
-      <database-info product="Mongo DB" version="4.0.8" jdbc-version="4.2" driver-name="MongoDB JDBC Driver" driver-version="1.11" dbms="MONGO" exact-version="4.0.8" exact-driver-version="1.11" />
+      <database-info product="Mongo DB" version="" jdbc-version="4.2" driver-name="MongoDB JDBC Driver" driver-version="1.11" dbms="UNKNOWN" exact-version="0" />
       <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
       <secret-storage>master_key</secret-storage>
       <user-name>dev</user-name>
