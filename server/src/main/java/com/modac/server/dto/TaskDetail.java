@@ -1,5 +1,6 @@
 package com.modac.server.dto;
 
+import com.modac.server.domain.TaskState;
 import com.modac.server.domain.TaskStatus;
 import com.modac.server.domain.TaskType;
 import lombok.AllArgsConstructor;
@@ -10,6 +11,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @AllArgsConstructor
 @Builder
@@ -26,6 +28,9 @@ public class TaskDetail {
 
     @Enumerated(value = EnumType.STRING)
     private TaskStatus status;
+
+    @Enumerated(value = EnumType.STRING)
+    private TaskState state;
 
     private Integer continuous;
 

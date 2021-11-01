@@ -11,6 +11,7 @@ import com.modac.server.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import reactor.core.publisher.Mono;
@@ -40,11 +41,8 @@ public class MultipartService {
         try {
             return userRepository.findById(id)
                     .map(user -> {
-                        String newFileName = fileLocation
-                                + "/user_" + id + "_" + System.nanoTime()
-                                + "_origin_" + originalFile.getOriginalFilename();
-
                         try {
+                            String newFileName = newFileName(id, true);
                             File newFile = new File(newFileName);
                             originalFile.transferTo(newFile);
 
@@ -93,11 +91,8 @@ public class MultipartService {
         try {
         return recordRepository.findById(id)
                 .map(record -> {
-                    String newFileName = fileLocation
-                            + "/record_" + id + "_" + System.nanoTime()
-                            + "_origin_" + originalFile.getOriginalFilename();
-
                     try {
+                        String newFileName = newFileName(id, false);
                         File newFile = new File(newFileName);
                         originalFile.transferTo(newFile);
 
@@ -125,12 +120,10 @@ public class MultipartService {
                         .id(record.getId())
                         .name(record.getName())
                         .comment(record.getComment())
-                        .type(record.getType())
                         .startedAt(record.getStartedAt())
                         .finishedAt(record.getFinishedAt())
                         .pausedCount(record.getPausedCount())
                         .pausedTime(record.getPausedTime())
-                        .duration(record.getDuration())
                         .content(record.getContent())
                         .build())
                 .switchIfEmpty(Mono.error(new NotFoundException("no match record")));
@@ -180,15 +173,22 @@ public class MultipartService {
                         .id(record.getId())
                         .name(record.getName())
                         .comment(record.getComment())
-                        .type(record.getType())
                         .startedAt(record.getStartedAt())
                         .finishedAt(record.getFinishedAt())
                         .pausedCount(record.getPausedCount())
                         .pausedTime(record.getPausedTime())
-                        .duration(record.getDuration())
                         .content(record.getContent())
                         .build())
                 .switchIfEmpty(Mono.error(new NotFoundException("no match record")));
+    }
+
+    private String newFileName(Long id, boolean user) {
+
+        if (user) {
+            return fileLocation + "/user/profile_" + id + "_" + System.nanoTime();
+        } else {
+            return fileLocation + "/record/content_" + id + "_" + System.nanoTime();
+        }
     }
 
     private Boolean removeResource(Multipart multipart) {

@@ -1,4 +1,4 @@
-package com.modac.server.controller;
+package com.modac.server.controller.api;
 
 import com.modac.server.dto.UserProfile;
 import com.modac.server.service.api.UserApiService;
@@ -16,11 +16,6 @@ public class UserApiController {
     @PostMapping("")
     public Mono<UserProfile> signup(@RequestParam String name, @RequestParam String email, @RequestParam String comment) {
         return userApiService.signup(name, email, comment);
-    }
-
-    @DeleteMapping("/{id}")
-    public Mono<String> unregister(@PathVariable Long id) {
-        return userApiService.unregister(id);
     }
 
     @GetMapping("/login")

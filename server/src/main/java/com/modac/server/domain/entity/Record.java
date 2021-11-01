@@ -10,6 +10,7 @@ import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Accessors(chain = true)
 @AllArgsConstructor
@@ -28,9 +29,6 @@ public class Record {
 
     private String comment;
 
-    @Enumerated(value = EnumType.STRING)
-    private TaskType type;
-
     private LocalDateTime startedAt;
 
     private LocalDateTime finishedAt;
@@ -38,8 +36,6 @@ public class Record {
     private Integer pausedCount;
 
     private Long pausedTime;
-
-    private Long duration;
 
     @Convert(converter = MultipartAttributeConverter.class)
     private Multipart content;
@@ -49,6 +45,9 @@ public class Record {
 
     @LastModifiedDate
     private LocalDateTime updatedAt;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "record")
+    private List<Reaction> reactions;
 
     @ManyToOne
     private User user;

@@ -32,6 +32,7 @@ create table TASK
     name           varchar(50) null,
     type           varchar(50) null,
     status         varchar(20) null,
+    state          varchar(20) null,
     continuous     int         null,
     pause_count    int         null,
     paused_time    bigint      null,
@@ -57,5 +58,3 @@ create table USER
     constraint USER_email_uindex
         unique (email)
 );
-
-

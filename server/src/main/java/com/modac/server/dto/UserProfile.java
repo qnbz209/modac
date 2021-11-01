@@ -2,6 +2,8 @@ package com.modac.server.dto;
 
 import com.modac.server.converter.MultipartAttributeConverter;
 import com.modac.server.domain.Multipart;
+import com.modac.server.domain.entity.User;
+import com.modac.server.repository.FollowRepository;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

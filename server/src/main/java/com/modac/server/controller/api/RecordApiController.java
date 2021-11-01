@@ -1,6 +1,5 @@
-package com.modac.server.controller;
+package com.modac.server.controller.api;
 
-import com.modac.server.domain.TaskType;
 import com.modac.server.dto.RecordDetail;
 import com.modac.server.dto.RecordThumbnail;
 import com.modac.server.service.api.RecordApiService;
@@ -21,11 +20,11 @@ public class RecordApiController {
 
     @PostMapping("")
     public Mono<RecordDetail> create(@RequestParam String name, @RequestParam String comment,
-                                     @RequestParam TaskType type, @RequestParam Integer pausedCount, @RequestParam Long pausedTime,
+                                     @RequestParam Integer pausedCount, @RequestParam Long pausedTime,
                                      @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime startedAt,
                                      @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime finishedAt,
                                      @RequestParam Long userId, @RequestParam Long taskId) {
-        return recordApiService.create(name, comment, type, pausedCount, pausedTime, startedAt, finishedAt, userId, taskId);
+        return recordApiService.create(name, comment, pausedCount, pausedTime, startedAt, finishedAt, userId, taskId);
     }
 
     @DeleteMapping("/{id}")
@@ -51,5 +50,15 @@ public class RecordApiController {
     @GetMapping("/thumbnail/{id}")
     public Flux<RecordThumbnail> getRecordThumbnailsByUserId(@RequestParam int page, @RequestParam int size, @PathVariable Long id) {
         return recordApiService.getRecordThumbnailsByUserId(page, size, id);
+    }
+
+    @GetMapping("/reaction/details/{id}")
+    public Flux<RecordDetail> getRecordDetailsByReactions(@RequestParam int page, @RequestParam int size, @PathVariable Long id) {
+        return recordApiService.getRecordDetailsByReactions(page, size, id);
+    }
+
+    @GetMapping("/reaction/thumbnail/{id}")
+    public Flux<RecordThumbnail> getRecordThumbnailsByReactions(@RequestParam int page, @RequestParam int size, @PathVariable Long id) {
+        return recordApiService.getRecordThumbnailsByReactions(page, size, id);
     }
 }

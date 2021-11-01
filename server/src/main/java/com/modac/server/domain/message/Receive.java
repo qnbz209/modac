@@ -2,6 +2,8 @@ package com.modac.server.domain.message;
 
 import com.modac.server.domain.Multipart;
 import com.modac.server.domain.TaskStatus;
+import com.modac.server.domain.entity.Task;
+import com.modac.server.domain.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

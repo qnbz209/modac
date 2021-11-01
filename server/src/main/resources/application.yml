@@ -1,12 +1,16 @@
+jasypt:
+  encryptor:
+    bean: stringEncryptor
+
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/modac
-    username: root
-    password: 1234
+    url: ENC(IPQ1oBwUZmcqJM8lm12BrsyjFnp+Xnn0wknw70pdiJE5IfKUGOwTUY5dxkgYpiOF)
+    username: ENC(0bBUEz+4A+KmIpUJM4pb9A==)
+    password: ENC(Ix2gKEu3P0qEnnP0AKzI2A==)
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
   servlet:
     multipart:
-      location: /Users/mingu/Projects/contents
+      location: /Users/mingu/Projects/modac/contents
 
 hibernate.id.new_generator_mappings: true

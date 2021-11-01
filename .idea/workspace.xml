@@ -5,10 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a81026b-0cb9-4138-8848-e68a6e59ad0b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/46efa56b-dc56-4744-b387-a6e02dd92b61.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/46efa56b-dc56-4744-b387-a6e02dd92b61.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/64fc5a86-77ec-4399-91b7-2afaebc9a74c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/64fc5a86-77ec-4399-91b7-2afaebc9a74c.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b0801211-d352-4497-819d-7fd0c2d5491e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b0801211-d352-4497-819d-7fd0c2d5491e.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c0861a71-72b8-40ad-9245-67558927976e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c0861a71-72b8-40ad-9245-67558927976e.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/server/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/modac/server/ServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/modac/server/ServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/modac/server/config/WebSocketConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/modac/server/config/WebSocketConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/modac/server/controller/FollowApiController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/modac/server/controller/RecordApiController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/modac/server/controller/SocketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/modac/server/controller/SocketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/modac/server/controller/TaskApiController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/modac/server/controller/UserApiController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/modac/server/domain/TaskRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/modac/server/domain/TaskRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/modac/server/domain/TaskType.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/modac/server/domain/TaskType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/modac/server/domain/entity/Follow.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/modac/server/domain/entity/Follow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/modac/server/domain/entity/Record.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/modac/server/domain/entity/Record.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/modac/server/domain/entity/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/modac/server/domain/entity/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/modac/server/domain/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/modac/server/domain/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/modac/server/dto/RecordDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/modac/server/dto/RecordDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/modac/server/dto/RecordThumbnail.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/modac/server/dto/RecordThumbnail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/modac/server/dto/TaskDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/modac/server/dto/TaskDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/modac/server/dto/TaskSynthesis.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/modac/server/dto/UserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/modac/server/dto/UserProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/modac/server/repository/FollowRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/modac/server/repository/FollowRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/modac/server/repository/StompRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/modac/server/repository/StompRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/modac/server/repository/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/modac/server/repository/TaskRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/modac/server/service/MultipartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/modac/server/service/MultipartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/modac/server/service/StompService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/modac/server/service/StompService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/modac/server/service/api/FollowApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/modac/server/service/api/FollowApiService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/modac/server/service/api/RecordApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/modac/server/service/api/RecordApiService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/modac/server/service/api/TaskApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/modac/server/service/api/TaskApiService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/modac/server/service/api/UserApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/modac/server/service/api/UserApiService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,6 +184,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="database.data.extractors.current.export.id" value="JSON-Groovy.json.groovy" />
+    <property name="database.data.extractors.current.id" value="JSON-Groovy.json.groovy" />
     <property name="jdk.selected.JAVA_MODULE" value="corretto-11" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -387,6 +418,8 @@
       <workItem from="1629552899727" duration="185000" />
       <workItem from="1629553103038" duration="169000" />
       <workItem from="1629553284910" duration="348000" />
+      <workItem from="1630399368232" duration="10000" />
+      <workItem from="1632376755279" duration="13000" />
     </task>
     <servers />
   </component>

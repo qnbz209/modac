@@ -1,4 +1,4 @@
-package com.modac.server.controller;
+package com.modac.server.controller.api;
 
 import com.modac.server.domain.entity.Follow;
 import com.modac.server.dto.UserThumbnail;

@@ -1,10 +1,10 @@
 package com.modac.server.service.api;
 
+import com.modac.server.domain.TaskState;
 import com.modac.server.domain.TaskStatus;
 import com.modac.server.domain.TaskType;
 import com.modac.server.domain.entity.Task;
 import com.modac.server.dto.TaskDetail;
-import com.modac.server.dto.TaskSynthesis;
 import com.modac.server.exception.NotFoundException;
 import com.modac.server.repository.TaskRepository;
 import com.modac.server.repository.UserRepository;
@@ -20,9 +20,7 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @RequiredArgsConstructor
 @Service
@@ -37,6 +35,7 @@ public class TaskApiService {
                         .name(name)
                         .type(type)
                         .status(TaskStatus.INACTIVE)
+                        .state(TaskState.PROGRESS)
                         .continuous(0)
                         .pauseCount(0)
                         .pausedTime(0L)
@@ -59,12 +58,13 @@ public class TaskApiService {
                 .orElseGet(() -> Mono.error(new NotFoundException("No match task")));
     }
 
-    public Mono<TaskDetail> update(Long id, String name, TaskType type) {
+    public Mono<TaskDetail> update(Long id, String name, TaskType type, TaskState state) {
 
         return taskRepository.findById(id)
                 .map(task -> {
                     task.setName(name)
                             .setType(type)
+                            .setState(state)
                             .setUpdatedAt(LocalDateTime.now());
                     return task;
                 })
@@ -78,7 +78,7 @@ public class TaskApiService {
     public Mono<Task> activate(Long id, LocalDateTime startedAt) {
         return taskRepository.findById(id)
                 .map(task -> {
-                    boolean isContinuous = (Duration.between(task.getLastDoneAt(), startedAt).getSeconds() <= 86400L);
+                    boolean isContinuous = (task.getLastDoneAt() != null) && (Duration.between(task.getLastDoneAt(), startedAt).getSeconds() <= 86400L);
                     task.setStatus(TaskStatus.ACTIVE)
                             .setContinuous(isContinuous ? 0 : (task.getContinuous() + 1))
                             .setStartedAt(startedAt)
@@ -106,8 +106,7 @@ public class TaskApiService {
                             .setPausedAt(null)
                             .setLastDoneAt(inactiveAt)
                             .setUpdatedAt(LocalDateTime.now())
-                            .setTotalDuration(totalDuration + Duration.between(startedAt, inactiveAt)
-                                    .minus(Duration.of(pausedTime, ChronoUnit.SECONDS)).toSeconds());
+                            .setTotalDuration(totalDuration + Duration.between(startedAt, inactiveAt).minus(Duration.of(pausedTime, ChronoUnit.SECONDS)).toSeconds());
                     return task;
                 })
                 .map(taskRepository::save)
@@ -167,25 +166,16 @@ public class TaskApiService {
         return Flux.fromIterable(taskDetails);
     }
 
-    public Mono<TaskSynthesis> getTaskSynthesisByUserId(Long userId) {
+    public Flux<TaskDetail> getTaskDetailsByUserIdAndState(int page, int size, Long userId, TaskState state) {
 
-        return userRepository.findById(userId)
-                .map(user -> {
-                    Map<TaskType, Long> taskTypeDurationMap = new HashMap<>();
+        Pageable pageable = PageRequest.of(page, size, Sort.by("createdAt").descending());
+        List<TaskDetail> taskDetails = new ArrayList<>();
 
-                    for (TaskType taskType : TaskType.values()) {
-                        taskTypeDurationMap.put(taskType, taskRepository.selectTotalDurationByType(user, taskType));
-                    }
+        for (Task task : taskRepository.findTasksByUserIdAndState(pageable, userId, state)) {
+            taskDetails.add(builder(task));
+        }
 
-                    return taskTypeDurationMap;
-                })
-                .map(Mono::just)
-                .orElseGet(Mono::empty)
-                .map(taskTypeDurationMap -> TaskSynthesis.builder()
-                        .userId(userId)
-                        .taskTypeDurationMap(taskTypeDurationMap)
-                        .build())
-                .switchIfEmpty(Mono.error(new NotFoundException("No match user")));
+        return Flux.fromIterable(taskDetails);
     }
 
     private TaskDetail builder(Task task) {
@@ -194,6 +184,7 @@ public class TaskApiService {
                 .name(task.getName())
                 .type(task.getType())
                 .status(task.getStatus())
+                .state(task.getState())
                 .continuous(task.getContinuous())
                 .pauseCount(task.getPauseCount())
                 .pausedTime(task.getPausedTime())

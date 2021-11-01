@@ -7,12 +7,16 @@ import com.modac.server.exception.NotFoundException;
 import com.modac.server.repository.FollowRepository;
 import com.modac.server.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,6 +32,7 @@ public class FollowApiService {
         return Mono.just(followRepository.save(Follow.builder()
                 .follower(follower)
                 .following(following)
+                .createdAt(LocalDateTime.now())
                 .build()));
     }
 
@@ -41,13 +46,12 @@ public class FollowApiService {
                 .orElseGet(() -> Mono.error(new NotFoundException("no match data")));
     }
 
-
     public Flux<UserThumbnail> getFollowers(int page, int size, Long id) {
 
-        PageRequest pageRequest = PageRequest.of(page, size, Sort.by("updatedAt").descending());
+        Pageable pageRequest = PageRequest.of(page, size, Sort.by("createdAt").descending());
         List<UserThumbnail> followers = new ArrayList<>();
 
-        for (Follow follow : followRepository.findFollowsByFollowing(pageRequest, id)) {
+        for (Follow follow : followRepository.findAllByFollowing(pageRequest, id)) {
             User user = userRepository.getById(follow.getFollower());
 
             followers.add(UserThumbnail.builder()
@@ -62,10 +66,10 @@ public class FollowApiService {
 
     public Flux<UserThumbnail> getFollowings(int page, int size, Long id) {
 
-        PageRequest pageRequest = PageRequest.of(page, size, Sort.by("updatedAt").descending());
+        Pageable pageRequest = PageRequest.of(page, size, Sort.by("createdAt").descending());
         List<UserThumbnail> followings = new ArrayList<>();
 
-        for (Follow follow : followRepository.findFollowsByFollower(pageRequest, id)) {
+        for (Follow follow : followRepository.findAllByFollower(pageRequest, id)) {
             User user = userRepository.getById(follow.getFollower());
 
             followings.add(UserThumbnail.builder()

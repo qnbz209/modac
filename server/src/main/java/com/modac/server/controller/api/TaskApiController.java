@@ -1,8 +1,8 @@
-package com.modac.server.controller;
+package com.modac.server.controller.api;
 
+import com.modac.server.domain.TaskState;
 import com.modac.server.domain.TaskType;
 import com.modac.server.dto.TaskDetail;
-import com.modac.server.dto.TaskSynthesis;
 import com.modac.server.service.api.TaskApiService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -27,8 +27,8 @@ public class TaskApiController {
     }
 
     @PutMapping("/{id}")
-    public Mono<TaskDetail> update(@PathVariable Long id, @RequestParam String name, @RequestParam TaskType type) {
-        return taskApiService.update(id, name, type);
+    public Mono<TaskDetail> update(@PathVariable Long id, @RequestParam String name, @RequestParam TaskType type, @RequestParam TaskState state) {
+        return taskApiService.update(id, name, type, state);
     }
 
     @GetMapping("/{id}")
@@ -41,9 +41,8 @@ public class TaskApiController {
         return taskApiService.getTaskDetailsByUserId(page, size, id);
     }
 
-    @GetMapping("/synthesis/{id}")
-    public Mono<TaskSynthesis> getTaskSynthesisByUserId(@PathVariable Long id) {
-        return taskApiService.getTaskSynthesisByUserId(id);
+    @GetMapping("/details/state/{id}")
+    public Flux<TaskDetail> getTaskDetailsByUserIdAndState(@RequestParam int page, @RequestParam int size, @PathVariable Long id, @RequestParam TaskState state) {
+        return taskApiService.getTaskDetailsByUserIdAndState(page, size, id, state);
     }
-
 }

@@ -1,5 +1,6 @@
 package com.modac.server.domain.entity;
 
+import com.modac.server.domain.TaskState;
 import com.modac.server.domain.TaskStatus;
 import com.modac.server.domain.TaskType;
 import lombok.*;
@@ -31,6 +32,9 @@ public class Task {
 
     @Enumerated(value = EnumType.STRING)
     private TaskStatus status;
+
+    @Enumerated(value = EnumType.STRING)
+    private TaskState state;
 
     private Integer continuous;
 

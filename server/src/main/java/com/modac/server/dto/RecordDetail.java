@@ -12,6 +12,7 @@ import javax.persistence.Convert;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import java.time.LocalDateTime;
+import java.util.Map;
 
 @AllArgsConstructor
 @Builder
@@ -36,8 +37,8 @@ public class RecordDetail {
 
     private Long pausedTime;
 
-    private Long duration;
-
     @Convert(converter = MultipartAttributeConverter.class)
     private Multipart content;
+
+    private Map<String, Integer> reactions;
 }

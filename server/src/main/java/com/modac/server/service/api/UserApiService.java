@@ -6,6 +6,8 @@ import com.modac.server.exception.NotFoundException;
 import com.modac.server.repository.FollowRepository;
 import com.modac.server.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
@@ -27,15 +29,6 @@ public class UserApiService {
                         .updatedAt(LocalDateTime.now())
                         .build()))
                 .map(this::builder);
-    }
-
-    public Mono<String> unregister(Long id) {
-        return userRepository.findById(id)
-                .map(user -> {
-                    userRepository.delete(user);
-                    return Mono.just("User deletion successes!");
-                })
-                .orElseGet(() -> Mono.error(new NotFoundException("no match user")));
     }
 
     public Mono<UserProfile> login(String email) {
@@ -75,8 +68,9 @@ public class UserApiService {
                 .name(user.getName())
                 .email(user.getEmail())
                 .comment(user.getComment())
+                .profile(user.getProfile())
                 .follower(followRepository.countAllByFollowing(user.getId()))
-                .follower(followRepository.countAllByFollower(user.getId()))
+                .following(followRepository.countAllByFollower(user.getId()))
                 .build();
     }
 }
