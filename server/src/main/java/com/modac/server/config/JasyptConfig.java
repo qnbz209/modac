@@ -18,8 +18,7 @@ public class JasyptConfig {
         PooledPBEStringEncryptor encryptor = new PooledPBEStringEncryptor();
         SimpleStringPBEConfig config = new SimpleStringPBEConfig();
 
-        // 어떻게 숨기지?
-        config.setPassword("modacpwkey");
+        config.setPassword(System.getProperty("encryptKey"));
         config.setAlgorithm("PBEWithMD5AndDES");
         config.setKeyObtentionIterations("1000");
         config.setPoolSize("1");
