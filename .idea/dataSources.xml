@@ -29,5 +29,12 @@
       <jdbc-url>jdbc:mysql://10.127.45.224:20306/health_pay?useSSL=false&amp;generateSimpleParameterMetadata=true</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="modac@modac.cpsbamqzix8x.ap-northeast-2.rds.amazonaws.com" uuid="81e78d7f-58bc-4bf6-bcd9-0eef44363e4f">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://modac.cpsbamqzix8x.ap-northeast-2.rds.amazonaws.com:3306/modac</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

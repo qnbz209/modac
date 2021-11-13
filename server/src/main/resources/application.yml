@@ -4,9 +4,9 @@ jasypt:
 
 spring:
   datasource:
-    url: ENC(IPQ1oBwUZmcqJM8lm12BrsyjFnp+Xnn0wknw70pdiJE5IfKUGOwTUY5dxkgYpiOF)
-    username: ENC(0bBUEz+4A+KmIpUJM4pb9A==)
-    password: ENC(Ix2gKEu3P0qEnnP0AKzI2A==)
+    url: ENC(7wwBf4+5o0+obCrm1EkPxSdgpZscW07fg4L4OiQqcjAOE4wyl8FWxiPTIJdcEgohuAcS7LQ/ZJvwhBsgj/fJqm3kJ68/64cYhWRX2OLVXdtdZgA934mgVQ==)
+    username: ENC(4yvZaZZv6EFw2t1ooxl8rQ==)
+    password: ENC(910Xyq/MceipjhuVJ3J04ao4GbgJ4aHg)
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
   servlet:
