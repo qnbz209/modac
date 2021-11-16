@@ -11,6 +11,6 @@ spring:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
   servlet:
     multipart:
-      location: /Users/mingu/Projects/modac/contents
+      location: /home/ubuntu/contents
 
 hibernate.id.new_generator_mappings: true
