@@ -4,9 +4,9 @@ jasypt:
 
 spring:
   datasource:
-    url: ENC(7wwBf4+5o0+obCrm1EkPxSdgpZscW07fg4L4OiQqcjAOE4wyl8FWxiPTIJdcEgohuAcS7LQ/ZJvwhBsgj/fJqm3kJ68/64cYhWRX2OLVXdtdZgA934mgVQ==)
-    username: ENC(4yvZaZZv6EFw2t1ooxl8rQ==)
-    password: ENC(910Xyq/MceipjhuVJ3J04ao4GbgJ4aHg)
+    url: jdbc:mysql://localhost:3306/modac
+    username: root
+    password: 1234
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
   servlet:
